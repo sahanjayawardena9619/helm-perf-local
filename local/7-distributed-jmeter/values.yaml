@@ -1,0 +1,51 @@
+#JMeter Master Slave Configurations
+
+#JMeter Master Configuration
+master:
+  jmeter:
+    image: maven
+    tag: alpine
+    pullPolicy: IfNotPresent
+    res:
+      req:
+        mem: "512Mi"
+        cpu: "250m"
+      lim:
+        mem: "512Mi"
+        cpu: "500m"
+
+  kube:
+    image: dtzar/helm-kubectl
+    tag: 2.14.3
+    pullPolicy: IfNotPresent
+    res:
+      req:
+        mem: "256M"
+        cpu: "100m"
+      lim:
+        mem: "512Mi"
+        cpu: "200m"
+slave:
+  replicaCount: 1
+  image: pedrocesarti/jmeter-docker
+  tag: 3.3
+  pullPolicy: IfNotPresent
+  resources:
+    requests:
+      memory: 1024i
+      cpu: 500m
+    limits:
+      memory: 1024Mi
+      cpu: 1000m
+  heapMemory:
+    xms1:
+      memory: 512M
+    xms2:
+      memory: 512M
+
+
+
+
+      
+
+

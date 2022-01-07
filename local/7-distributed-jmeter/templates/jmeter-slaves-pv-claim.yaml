@@ -1,0 +1,31 @@
+# Persistent Volume Claim for Maven
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: m2-volume-pv-claim
+  namespace: perf-platform
+  annotations:
+    volume.beta.kubernetes.io/storage-class: managed-premium
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+
+---
+
+# Persistent Volume Claim for Jenkins
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: helm-volume-pv-claim
+  namespace: perf-platform
+  annotations:
+    volume.beta.kubernetes.io/storage-class: managed-premium
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
