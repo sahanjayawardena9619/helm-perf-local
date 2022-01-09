@@ -3,12 +3,12 @@ entries:
   jenkins:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-01-07T22:40:00.9830387+05:30"
+    created: "2022-01-09T20:54:49.0064958+05:30"
     description: A Helm chart for Kubernetes
-    digest: ef2a00e9426152229dc7bc18a44b3408aee5f0440b366d8be1e7106947823c8a
+    digest: 42535aa456e0ecaf0be3db50e19822a6b017cf625946e88a8787e1a4405d78f1
     name: jenkins
     type: application
     urls:
     - jenkins-0.1.0.tgz
     version: 0.1.0
-generated: "2022-01-07T22:40:00.9814634+05:30"
+generated: "2022-01-09T20:54:49.004849+05:30"
